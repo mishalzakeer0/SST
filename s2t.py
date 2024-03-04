@@ -37,5 +37,6 @@ for example in output:
     # print(decoder(example.cpu()))
     translator = Translator(to_lang=TO_LANG)
     malayalam_text = translator.translate(decoder(example.cpu()))
+    print(malayalam_text)
     tts = gTTS(text=malayalam_text, lang=TO_LANG, slow=False)
     tts.save('output.mp3')
